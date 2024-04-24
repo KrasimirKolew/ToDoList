@@ -2,6 +2,8 @@ import React from 'react'
 
 export const TodoForm = () => {
     return (
-        <div>TodoForm</div>
+        <form className='TodoForm'>
+            <input type="text" className='todo-input' placeholder='What is the task today?'/>
+        </form>
     )
 }
