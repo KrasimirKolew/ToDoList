@@ -19,6 +19,15 @@ export const TodoWrapper = () => {
     //dell
     const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
 
+    //compleate
+    const toggleComplete = (id) => {
+        setTodos(
+            todos.map((todo) =>
+                todo.id === id ? { ...todo, completed: !todo.completed } : todo
+            )
+        );
+    }
+
     const addTodo = todo => {
 
         setTodos([...todos, { id: uuidv4(), task: todo,
