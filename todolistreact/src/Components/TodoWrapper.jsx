@@ -28,7 +28,7 @@ export const TodoWrapper = () => {
         );
     }
 
-    //edit
+    //editTodo
     const editTodo = (id) => {
         setTodos(
             todos.map((todo) =>
@@ -36,6 +36,15 @@ export const TodoWrapper = () => {
             )
         );
     }
+
+    //edit task
+    const editTask = (task, id) => {
+        setTodos(
+            todos.map((todo) =>
+                todo.id === id ? { ...todo, task, isEditing: !todo.isEditing } : todo
+            )
+        );
+    };
 
     const addTodo = todo => {
 
