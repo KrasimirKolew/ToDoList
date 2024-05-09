@@ -6,7 +6,16 @@ uuidv4();
 
 export const TodoWrapper = () => {
 
-    const [todos, setTodos] = useState([])
+    const [todos, setTodos] = useState([]);
+
+    //add
+    const addTodo = (todo) => {
+        setTodos([
+            ...todos,
+            { id: uuidv4(), task: todo, completed: false, isEditing: false },
+        ]);
+    }
+
 
     const addTodo = todo => {
 
