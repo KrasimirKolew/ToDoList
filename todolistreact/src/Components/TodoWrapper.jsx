@@ -16,6 +16,8 @@ export const TodoWrapper = () => {
         ]);
     }
 
+    //dell
+    const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
 
     const addTodo = todo => {
 
