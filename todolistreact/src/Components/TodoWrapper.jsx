@@ -28,6 +28,15 @@ export const TodoWrapper = () => {
         );
     }
 
+    //edit
+    const editTodo = (id) => {
+        setTodos(
+            todos.map((todo) =>
+                todo.id === id ? { ...todo, isEditing: !todo.isEditing } : todo
+            )
+        );
+    }
+
     const addTodo = todo => {
 
         setTodos([...todos, { id: uuidv4(), task: todo,
